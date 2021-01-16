@@ -1,6 +1,5 @@
 // from data.js
 var tableData = data;
-let tableMatch = null;
 console.log(tableData);
 
 // Variable declariation
