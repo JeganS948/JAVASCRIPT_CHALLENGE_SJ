@@ -13,11 +13,11 @@ function buildTable(data){
     // Loop through `data` 
     data.forEach((dataRow) => {
         // Append table row `tr` for each UFO sighting value
-        let row = tbody.append("tr");
+        row = tbody.append("tr");
         // Use `Object.values` & `forEach` to 
-        Object.values(dataRow).forEach((val) => {
+        Object.values(dataRow).forEach((value) => {
             // Append a cell to the row for each value
-            let cell = row.append("td");
+            cell = row.append("td");
             cell.text(val);
         });
     })
