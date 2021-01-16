@@ -51,19 +51,19 @@ function handleClick(){
     // initialize tableData as filteredData
     filteredData = tableData;
     if (dateTime) {
-        var filteredData = filteredData.filter(record => record.datetime === dateTime);
+        filteredData = filteredData.filter(record => record.datetime === dateTime);
     }
     if (selectedCountry) {
-        var filteredData = filteredData.filter(record => record.country === selectedCountry);
+        filteredData = filteredData.filter(record => record.country === selectedCountry);
     }
     if (selectedState) {
-        var filteredData = filteredData.filter(record => record.state === selectedState);
+        filteredData = filteredData.filter(record => record.state === selectedState);
     }
     if (selectedCity) {
-        var filteredData = filteredData.filter(record => record.city === selectedCity);
+        filteredData = filteredData.filter(record => record.city === selectedCity);
     }
     if (selectedShape) {
-        var filteredData = filteredData.filter(record => record.shape === selectedShape);
+        filteredData = filteredData.filter(record => record.shape === selectedShape);
     }
 
     // Build Table with Filtered Data
