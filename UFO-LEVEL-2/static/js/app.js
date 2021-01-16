@@ -44,6 +44,32 @@ function handleClick(){
         // Apply Filter to the Table Data to Only Keep Rows Where datetime Value Matches the Filter Value
         filterData = filterData.filter((row) => row.datetime === date);
     }
+
+    // Get the value property of the input elements and set all text to lowercase
+    var dateTime = d3.select("#datetime").property("value");
+    var selectedCountry = d3.select("#country").property("value").toLowerCase();
+    var selectedState = d3.select("#state").property("value").toLowerCase();
+    var selectedCity = d3.select("#city").property("value").toLowerCase();
+    var selectedShape = d3.select("#shape").property("value").toLowerCase();
+
+    // initialize tableData as filteredData
+    filteredData = tableData;
+    if (dateTime) {
+        var filteredData = filteredData.filter(record => record.datetime === dateTime);
+    }
+    if (selectedCountry) {
+        var filteredData = filteredData.filter(record => record.country === selectedCountry);
+    }
+    if (selectedState) {
+        var filteredData = filteredData.filter(record => record.state === selectedState);
+    }
+    if (selectedCity) {
+        var filteredData = filteredData.filter(record => record.city === selectedCity);
+    }
+    if (selectedShape) {
+        var filteredData = filteredData.filter(record => record.shape === selectedShape);
+    }
+
     // Build Table with Filtered Data
     buildTable(filterData);
 }
